@@ -1,4 +1,15 @@
 from time import sleep
+nm = 0
+cont = 0
+nms = 0
+nm = int(input('Coloque um número(999 faz parar): '))
+while nm != 999:
+    cont += 1
+    nms += nm
+    nm = int(input('Coloque um número(999 faz parar): '))
+print('No final você digitou {} números e a soma de todos eles é {} (Tirando o 999)'.format(cont, nms))
+
+
 nm1 = int(input('Digite o primeiro número: '))
 nm2 = int(input('Digite o segundo número: '))
 esco = 0
