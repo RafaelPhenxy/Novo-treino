@@ -1,9 +1,28 @@
 from time import sleep
+
+while True:
+    mul = 0
+    tabu = int(input('Me fale um número para fazer tabuada (0 ou negativo finaliza o programa): '))
+    if tabu <= 0:
+        print('Finalizando...')
+        sleep(1)
+        break
+    else:
+        for i in range (1, 11):
+            mul += 1
+            print(f'{tabu} X {mul} = {tabu*mul}')
+
+
+
+
+
 nm = 0
 cont = 0
 nms = 0
 nm = int(input('Coloque um número(999 faz parar): '))
-while nm != 999:
+while True:
+    if nm == 999:
+        break
     cont += 1
     nms += nm
     nm = int(input('Coloque um número(999 faz parar): '))
