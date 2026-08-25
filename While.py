@@ -1,4 +1,78 @@
 from time import sleep
+from random import randint
+tot = 0
+Pm1000 = 0
+mb = 0
+cont = 0
+while True:
+    nom = str(input('Nome do produto: '))
+    val = float(input('Preço do produto: '))
+
+
+
+
+
+M18 = 0
+Hc = 0
+Mm18 = 0
+while True:
+    print('Cadastre uma pessoa!')
+    ida = int(input('Qual a idade: '))
+    sexo = ' '
+    escolha = ' '
+    while sexo not in 'MmFf':
+        sexo = str(input('Qual o seu sexo: [M/F]')).strip().upper()[0]
+    while escolha not in 'SsNn':
+        escolha = str(input('Quer continuar? [S/N]')).strip().upper()
+    if ida >= 18:
+        M18 += 1
+    if sexo == 'M':
+        Hc += 1
+    if sexo == 'F' and ida < 20:
+        Mm18 += 1
+    if escolha == "N":
+        print(f'Você cadastrou {M18} pessoas com ou mais de 18 anos, {Hc} pessoas do sexo masculino e {Mm18} mulheres com menos de 20 anos de idade.')
+        break
+    
+
+
+
+
+
+
+print('Vamos jogar impar ou par!')
+v = 0
+while True:
+    IoP = str(input('Impar ou par?(I/P): '))
+    nmp = int(input('Agora escolhe um número: '))
+    bt = randint(0, 10)
+    if IoP == "I":
+        if (nmp + bt) % 2 == 1:
+            print(f'Você jogou {nmp} e o bot {bt}, a soma é {nmp+bt} resultando em impar então você GANHOU!')
+            v += 1
+
+        else:
+            print(f'Você jogou {nmp} e o bot {bt}, a soma é {nmp+bt} resultando em par, que pena você PERDEU!')
+            print(f'Você ganhou {v} vezes.')
+            print('Finalizando...')
+            sleep(1)
+            break
+    elif IoP == 'P':
+        if (nmp + bt) % 2 == 0:
+            print(f'Você jogou {nmp} e o bot {bt}, a soma é {nmp+bt} resultando em par então você GANHOU!')
+            v += 1
+        else:
+            print(f'Você jogou {nmp} e o bot {bt}, a soma é {nmp+bt} que infelizmente é impar e você perdeu!')
+            print(f'Você ganhou {v} vezes.')
+            print('Finalizando...')
+            sleep(1)
+            break
+    else:
+        print('Digite a letra certa.')
+
+
+
+
 
 while True:
     mul = 0
