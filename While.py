@@ -1,12 +1,64 @@
 from time import sleep
 from random import randint
-tot = 0
+valor = int(input('Quanto você quer sacar? '))
+total = valor
+ced = 100
+totced = 0
+while True:
+    if total >= ced:
+        total -= ced
+        totced += 1
+    else:
+        if totced > 0:
+            print(f'Você sacou {totced} notas de {ced} reais')
+        if ced == 100:
+            ced = 50
+        elif ced == 50:
+            ced = 20
+        elif ced == 20:
+            ced = 10
+        elif ced == 10:
+            ced = 5
+        elif ced == 5:
+            ced = 2
+        elif ced == 2:
+            ced = 1
+        totced = 0
+        if total == 0:
+            break
+
+
+
+
+
+
+
 Pm1000 = 0
-mb = 0
+mp = 0
+mn = ' '
 cont = 0
+tot = 0
+print('Mercado tudinho.')
 while True:
     nom = str(input('Nome do produto: '))
     val = float(input('Preço do produto: '))
+    tot += val
+    cont += 1
+    if cont == 1 or val < mp:
+        mp = val
+        mn = nom
+    esco = ' '
+    while esco not in 'SsNn':
+        esco = str(input('Quer continuar?[S/N] ')).strip().upper()[0]
+    if val >= 1000:
+        Pm1000 += 1
+    
+    if esco == "N":
+        print(f'O valor total foi {tot}')
+        print(f'{Pm1000} itens passaram de 1000 reais')
+        print(f'O item mais barato que você comprou foi {mn} custando {mp}')
+        break
+    
 
 
 
