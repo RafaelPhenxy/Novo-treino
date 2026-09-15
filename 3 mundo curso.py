@@ -20,3 +20,20 @@ print(c)
 print(len(c))
 print(c.count(2))
 print(c.index(9))
+del (c)
+
+#Exercicios
+extenso = ('Zero', 'Um', 'Dois', 'Tres', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Onze', 'Doze', 'Treze', 'Catorze', 'Quinze', 'Dezesseis', 'Dezesste', 'Dezoito', 'Dezenove', 'Vinte')
+while True:
+    num = int(input("Escolha um número entre 0 a 20: "))
+    if 0 <= num <= 20:
+        print(f'Você digitou {extenso[num]}')
+        break
+    else:
+        esco = ' '
+        print('Tente novamente')
+        while esco not in 'SsnN':
+            esco = str(input('Quer continuar? S/N ')).upper().strip()[0]
+        if esco == 'N':
+            print('Encerrando...')
+            break
