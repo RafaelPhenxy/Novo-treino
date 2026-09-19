@@ -37,3 +37,16 @@ while True:
         if esco == 'N':
             print('Encerrando...')
             break
+#
+perso = ('Kris', 'Susie', 'Ralsei', 'Noelle', 'Berdly', 'Sans', 'Papyrus', 'Toriel', 'Asgore', 'Asriel', 'Chara', 'Frisk', 'Gaster', 'Gerson', 'Undyne', 'Alphys', 'Lancer', 'Knight', 'Flowery', 'Flowey')
+print('Lista com todos os personagens:', perso)
+print('Primeiros 5 personagens:', perso[0:5])
+print('Ultimos 4 personagens:', perso[16:])
+print('Em ordem alfabética:', sorted(perso))
+print('Personagem Sans fica na posição:', perso.index('Sans')+1)
+#
+from random import randint
+Mm = (randint(0,10), randint(0,10), randint(0,10), randint(0,10), randint(0,10))
+print('Os números são:', Mm)
+print('O maior é:', max(Mm))
+print('O menor é:', min(Mm))
