@@ -50,3 +50,15 @@ Mm = (randint(0,10), randint(0,10), randint(0,10), randint(0,10), randint(0,10))
 print('Os números são:', Mm)
 print('O maior é:', max(Mm))
 print('O menor é:', min(Mm))
+#
+nums = (int(input('Escolha um número: ')), int(input('Escolha outro: ')), int(input('Escolha mais um: ')), int(input('Escolha o último: ')))
+print(f'Você digitou os valores: {nums}')
+print(f'Nove apareceu {nums.count(9)} vezes.')
+if 3 in nums:
+    print(f'O primeiro número 3 apareceu na posição {nums.index(3)+1}.')
+else:
+    print('O número 3 apareceu em lugar nenhum.')
+print('Os números pares que apareceram foram:')
+for n in nums:
+    if n % 2 == 0:
+        print(n)
