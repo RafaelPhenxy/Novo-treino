@@ -1,13 +1,16 @@
 listn = []
+listm = []
+listme = []
 for o in range(0,5):
     listn.append(int(input('Fale um valor: ')))
-for p, va in enumerate(range[listn]):
+for p, va in enumerate(listn):
     if va == max(listn):
-        print(p, va)
+        listm.append(p)
     if va == min(listn):
-        print(p, va)
-print(listn)
-
+        listme.append(p)
+print(*listn)
+print(f'O maior número foi {max(listn)} e ele tava na posição', *listm, sep= ', ')
+print(f'O menor número foi {min(listn)} e ele tava na posição', *listme, sep= ', ')
 
 
 val = [9, 4, 5, 0, 4, 6, 3, 2, 7, 10]
