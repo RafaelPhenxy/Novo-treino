@@ -1,3 +1,21 @@
+
+lista = []
+while True:
+    num = (int(input('Escolha um número: ')))
+    if num not in lista:
+        lista.append(num)
+    elif num in lista:
+        print('Não vou colcar esse número duplicado')
+    esco = str(input('Quer continuar?(S/N): ')).upper().strip()[0]
+    while esco not in 'SsNn':
+            print('Escreva S ou N')
+            esco = str(input('Quer continuar?(S/N): ')).upper().strip()[0]
+    if esco == 'N':
+        break
+print(f'Você digitou os números {sorted(lista)}')
+
+
+#
 listn = []
 listm = []
 listme = []
@@ -9,8 +27,8 @@ for p, va in enumerate(listn):
     if va == min(listn):
         listme.append(p)
 print(*listn)
-print(f'O maior número foi {max(listn)} e ele tava na posição', *listm, sep= ', ')
-print(f'O menor número foi {min(listn)} e ele tava na posição', *listme, sep= ', ')
+print(f'O maior número foi {max(listn)} e ele tava na posição: ', *listm)
+print(f'O menor número foi {min(listn)} e ele tava na posição: ', *listme)
 
 
 val = [9, 4, 5, 0, 4, 6, 3, 2, 7, 10]
